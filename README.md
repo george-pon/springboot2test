@@ -8,9 +8,10 @@
 
 * https://gradle.org/ Gradle Build Tool
 * https://guides.gradle.org/building-spring-boot-2-projects-with-gradle/ Building Spring Boot 2 Applications with Gradle
-    
 * https://docs.spring.io/spring-boot/docs/current/gradle-plugin/reference/html/ Spring Boot Gradle Plugin Reference Guide
     こちらがマトモか。
+
+基本的には gradle の https://guides.gradle.org/building-spring-boot-2-projects-with-gradle/ Building Spring Boot 2 Applications with Gradle に沿って進行。ちょいちょい修正。
 
 ```
 # サンプルプロジェクト用のディレクトリを作成
@@ -22,16 +23,25 @@ gradle init --type java-application
 ```
 
 ここで、gradle.build ファイルを手作り。
+詳しくは  https://github.com/george-pon/springboot2test/blob/master/build.gradle  参照。
+
+ビルド
 
 ```
-# jarもwarも作成する
+# jarもwarも作成する。 warのファイルサイズがjarとほぼ変わらない...。(約16MB)
 gradle clean build bootJar bootWar
 ```
 
+実行
 
 ```
-# Spring Boot 2 内蔵tomcatによる起動
+# Spring Boot 2 内蔵tomcatによる起動。 Ctrl-C で停止する。
 gradle bootRun
+
+# ブラウザから http://localhost:8080/ にアクセスすると、Hello Gradle! が表示される。
+
+# Spring Boot 2 内蔵tomcatによるjar直接起動。 Ctrl-C で停止する。
+java -jar ./build/libs/springboot2test.jar
 
 # ブラウザから http://localhost:8080/ にアクセスすると、Hello Gradle! が表示される。
 ```

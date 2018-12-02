@@ -8,8 +8,9 @@
 
 * https://gradle.org/ Gradle Build Tool
 * https://guides.gradle.org/building-spring-boot-2-projects-with-gradle/ Building Spring Boot 2 Applications with Gradle
+    ちょいちょい違うところがあり、このままでは動作しない
 * https://docs.spring.io/spring-boot/docs/current/gradle-plugin/reference/html/ Spring Boot Gradle Plugin Reference Guide
-    こちらがマトモか。
+    こちらが比較的マトモか。
 
 基本的には gradle の https://guides.gradle.org/building-spring-boot-2-projects-with-gradle/ Building Spring Boot 2 Applications with Gradle に沿って進行。ちょいちょい修正。
 

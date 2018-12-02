@@ -13,7 +13,7 @@
 
 plugins {
     id 'java'
-    id 'war' // warプラグインを有効にすると、単独実行用のjarは作成されなくなる。
+    id 'war' // warプラグインを有効にすると、デフォルトでは単独実行用のjarは作成されなくなる。両方作る場合は bootJar bootWar を指定する。
     // id 'com.gradle.build-scan' version '2.0.2'
     id 'org.springframework.boot' version '2.1.1.RELEASE'
 }
@@ -29,7 +29,7 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-dependencies:2.1.1.RELEASE'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat' // これエラーになるな...
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat' // warプラグインを使ってwarを作る場合はこれを追加する
     // implementation 'org.springframework.boot:spring-boot-starter-data-jpa' // DBに接続するならこれを入れる。DB接続用のプロパティが必須になる。
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'

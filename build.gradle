@@ -30,7 +30,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-dependencies:2.1.1.RELEASE'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat' // warプラグインを使ってwarを作る場合はこれを追加する
-    // implementation 'org.springframework.boot:spring-boot-starter-data-jpa' // DBに接続するならこれを入れる。DB接続用のプロパティを書かないとコンパイルエラーになる。
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa' // DBに接続するならこれを入れる。DB接続用のプロパティをapplication.propertiesの中に書かないとコンパイルエラーになる。
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
